@@ -1,0 +1,26 @@
+.grid-container{
+  display : grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr ;
+  grid-template-areas: 
+  "header"
+  "navigation"
+  "main"
+  "footer";
+}
+
+.Header{
+  grid-area: header;
+}
+
+.Navigation{
+  grid-area: navigation;
+}
+
+.Main{
+  grid-area: main;
+}
+
+.Footer{
+  grid-area: footer;
+}

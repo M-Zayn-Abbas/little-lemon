@@ -1,10 +1,11 @@
 import Nav from "./Nav"
+import logo from'./Logo .png'
 const Header = () => {
     return(
-        <>
-        <img src="Logo.png"/>
-        <Nav/>
-        </>
+        <header>
+        <img src={logo} alt="Logo"/>
+        <Nav className="Navigation"/>
+        </header>
             )
     }
 
