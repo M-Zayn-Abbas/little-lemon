@@ -1,7 +1,7 @@
-import "../MainLayout.css";
+import "../Cssfiles/Nav.css";
 const Nav = () => {
     return (
-        <ul className="navelements">
+        <ul className="nav-container">
             <li><a>Home</a></li>
             <li><a>About</a></li>
             <li><a>Menu</a></li>

@@ -1,10 +1,11 @@
 import Nav from "./Nav"
 import logo from'./Logo .png'
+import '../Cssfiles/Header.css'
 const Header = () => {
     return(
-        <header>
+        <header className="Header">
         <img src={logo} alt="Logo"/>
-        <Nav className="Navigation"/>
+        <Nav/>
         </header>
             )
     }

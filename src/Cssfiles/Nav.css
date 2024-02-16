@@ -1,0 +1,13 @@
+.nav-container{
+    display: flex;
+    justify-content : flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: 'KARLA REGULAR';
+    font-size: medium;
+    font-weight: 700;
+}
+
+.nav-container > li {
+margin-left: 20px;
+}
