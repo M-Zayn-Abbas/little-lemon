@@ -12,7 +12,7 @@ const Section1 = () => {
         focused on traditional recipies served with a modern
         twist </h4>
 
-    <button>Reseve Table</button>
+    <button className='reserve-button'>Reseve Table</button>
     </div>
     <img src={pic} alt="pic of restaurant"/>
 </section>
