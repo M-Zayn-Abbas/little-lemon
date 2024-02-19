@@ -5,8 +5,8 @@ import lemmonDessert from'../img/lemmon-dessert.jpg';
 import deliveryIcon from  '../img/5637246.png';
 const Section2 = ()=> {
     return(
-        <section>
-            <div className="heading/button">
+        <section className='parent-container'>
+            <div className="heading-button">
     <h1>This week special</h1>
 <button >Online Menu</button>
 </div>

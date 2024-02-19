@@ -1,3 +1,35 @@
+.parent-container{
+    margin-bottom: 100px;
+    background-color: rgb(224, 223, 223);
+}
+
+.heading-button{
+    display :flex;
+    justify-content: center;
+    gap: 350px;
+    margin: 20px 0 30px 0;
+}
+
+.heading-button h1{
+    font-family: "Karla Regular";
+    font-size: 40pt;
+    margin:0;
+}
+
+.heading-button button{
+    margin: 0;
+    min-width: 150px;;
+    min-height: 50px;
+    max-width: 150px;
+    max-height: 50px;
+    background-color: #F4CE14;
+    font-family: "Markazi Text",serif;
+    font-size: 16pt;
+    font-weight: 600;
+    border-radius: 10px;
+    border-color: #F4CE14;
+}
+
 .dishes{
     display: flex;
     justify-content: center;
@@ -7,7 +39,6 @@
     display: flex;
     flex-direction: column;
     margin-right: 25px;
-    background-color: lightgray;
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 
@@ -16,6 +47,10 @@
 .dish p{
     width : 15rem;
     word-wrap: break-word;
+    font-family:"Karla Regular";
+    font-size: 14pt;
+    font-weight: normal;
+    color:grey;
 }
 
 .dish h2 {
@@ -30,13 +65,13 @@
     width:17rem;
     height:13rem;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .delivery{
-    width: 2rem;
-    height:2rem;
-    margin-top: 25px;
-    margin-left: 5px;
+    width: 1.5rem;
+    height:1.5rem;
+   margin-left: 10px;
 }
 
 .namePrice{
@@ -44,7 +79,28 @@
     justify-content: space-between;
 }
 
+.namePrice h1{
+    font-family: "Karla Regular" ;
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 0;
+}
+
+.namePrice h2{
+    font-family: "Karla Regular" ;
+    font-size: 16pt;
+    font-weight: medium;
+    color: #EE9972;
+    margin: 0;
+}
+
 .delimg{
     display:flex;
     justify-content: center
+}
+
+.delimg h2{
+    font-family: "Karla Regular";
+    font-size: 14pt;
+    margin: 0;
 }
