@@ -1,9 +1,8 @@
 import React,{useState} from "react";
-const BookingForm = () => {
+const BookingForm = ({availableTimes}) => {
 
     const[date,setDate]= useState("");
     const[guests,setGuests]=useState("");
-    const[times,setTimes]=useState(["18:00","19:00","20:00","21:00","22:00"]);
     const[selectedTime,setSelectedTime]=useState("");
     const[occasion,setOccasion]=useState("");
 
@@ -19,7 +18,7 @@ const BookingForm = () => {
             <div>
                 <label htmlFor="time">Choose Time </label>
                 <select id="time" value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)}>
-                    {times.map((time)=> (
+                    {availableTimes.map((time)=> (
                         <option  key={time} value={time} >{time}</option>
                      ))}
                 </select>
