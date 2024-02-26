@@ -1,26 +1,52 @@
-import BookingForm from "./BookingForm";
-import { useReducer } from "react";
+import { useReducer } from 'react';
+import Booking from './Booking';
 
-export const initializeTimes = () => {
-    return ["18:00","19:00","20:00","21:00","22:00"];
-
-}
-
-export const updateTimes =(date) => {
-
-        return ["18:00","19:00","20:00","21:00","22:00"];
-    }
 
 const Main = () => {
 
-    
-    const[availableTimes,dispatch]=useReducer(updateTimes,initializeTimes());
+    const seedRandom = seed =>{
+
+        var m = 2**35 -31;
+        var a = 185852;
+        var s = seed %m ;
+        return function(){
+            return (s = s *a %m)/ m;
+        }
+
+    }
+
+    const fetchAPI= function(date){
+        let result = [];
+        let random = seedRandom(date.getDate());
+        for(let i=17 ; i<=23 ; i++){
+            if(random() < 0.5){
+                result.push(i +' : 00');
+            }
+            if(random() > 0.5){
+                result.push(i + ' : 30');
+            }
+
+        }
+        return result;
+
+    }
+
+    const inititalState = {availableTimes : fetchAPI(new Date())};
+    const[state,dispatch] = useReducer(updateTimes,inititalState);
+
+    function updateTimes(state,date){
+        return {availableTimes : fetchAPI(new Date())}
+    }
+
+    function SubmitForm(){
+        return true;
+    }
 
 
     return (
-        <>
-        <BookingForm availableTimes={availableTimes} dispatch={dispatch}/>
-        </>
+        <main>
+           <Booking availableTimes={state} dispatch={dispatch} SubmitForm={SubmitForm}/>
+        </main>
     )
 }
 
