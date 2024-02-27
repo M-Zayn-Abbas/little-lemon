@@ -1,6 +1,9 @@
 import pic from '../img/section1.jpg'
 import '../Cssfiles/Section1.css';
+import { useNavigate } from 'react-router-dom';
 const Section1 = () => {
+
+    const navigate= useNavigate();
 
     return (
         <>
@@ -12,7 +15,7 @@ const Section1 = () => {
         focused on traditional recipies served with a modern
         twist </h4>
 
-    <button className='reserve-button'>Reseve Table</button>
+    <button className='reserve-button' onClick={()=> navigate('booking')}>Reseve Table</button>
     </div>
     <img src={pic} alt="pic of restaurant"/>
 </section>

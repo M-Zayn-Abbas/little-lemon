@@ -1,5 +1,6 @@
 import { useReducer } from 'react';
 import Booking from './Booking';
+import { useNavigate } from 'react-router-dom';
 
 
 const Main = () => {
@@ -38,8 +39,16 @@ const Main = () => {
         return {availableTimes : fetchAPI(new Date())}
     }
 
-    function SubmitForm(){
+    const submitAPI = formData => {
         return true;
+    }
+
+    const navigate = useNavigate();
+    
+    function SubmitForm(formData){
+        if(submitAPI(formData)){
+            navigate('/confirmed');
+        }
     }
 
 

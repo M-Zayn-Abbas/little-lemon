@@ -5,6 +5,15 @@ const BookingForm = (props) => {
     const[guests,setGuests]=useState("");
     const[times,setTimes]=useState("");
     const[occasion,setOccasion]=useState("");
+    const[formValid, setformValid] = useState(false);
+
+    const validateform = () => {
+        if(date !== "" && times !==""){
+            return false;
+        }
+        return true;
+    }
+
 
 
     const handleSubmit = (e) => {
@@ -13,7 +22,7 @@ const BookingForm = (props) => {
     }
 
     const handleChange= (e) =>{
-        setDate(e);
+        setDate(e.target.value);
         props.dispatch(e);
     }
 
@@ -24,7 +33,7 @@ const BookingForm = (props) => {
             <div>
             <label htmlFor="date">Enter Date</label>
         <input type="date" name="date" id="date" value={date} 
-  onChange={(e) => setDate(e.target.value)} />
+  onChange={handleChange} />
             </div>
 
 
@@ -55,7 +64,7 @@ const BookingForm = (props) => {
                 </select>
             </div>
             <div>
-                <input aria-label="On Click" type="submit" value="Make Your reservation"/>
+                <input aria-label="On Click" type="submit" value="Make Your reservation" disabled={validateform()}/>
             </div>
 
         </form>
