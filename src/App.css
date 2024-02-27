@@ -1,6 +1,7 @@
 .App {
-  text-align: center;
-}
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;}
 
 .App-logo {
   height: 40vmin;
@@ -36,3 +37,184 @@
     transform: rotate(360deg);
   }
 }
+.Footer {
+  margin-top: auto; /* Push the footer to the bottom of the container */
+
+}
+
+.ConfirmBooking {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+Main {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us {
+  display: flex;
+  justify-content: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 100vh;
+}
+
+.about-us h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-us p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.content {
+  display: flex;
+  justify-content: left;/* Allow items to wrap to the next line if necessary */
+}
+
+.text {
+  margin-right: 20px; /* Add margin to separate text from image */
+}
+
+.menu {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 90vh;
+}
+
+.category {
+  margin-bottom: 30px;
+}
+
+.category h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.category li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.item-name {
+  font-weight: bold;
+}
+
+.item-price {
+  color: #666;
+}
+
+.order-online {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.order-online h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.order-online p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.order-online form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-online label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.order-online input,
+.order-online textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.order-online button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.order-online button:hover {
+  background-color: #0056b3;
+}
+
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  height :80vh;
+}
+
+.login h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.login input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: #0056b3;
+}
+
+

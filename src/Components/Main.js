@@ -53,7 +53,7 @@ const Main = () => {
 
 
     return (
-        <main>
+        <main className='main'>
            <Booking availableTimes={state} dispatch={dispatch} SubmitForm={SubmitForm}/>
         </main>
     )

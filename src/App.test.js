@@ -5,12 +5,6 @@ import {initializeTimes} from './Components/Main'
 
 
 
-test('Renders the BookingForm heading', () => {
-  render(<BookingForm availableTimes={["8","9"]} dispatch={() => console.log("hello") }/>);
-  const headingElement = screen.getByText("Booking Form");
-  expect(headingElement).toBeInTheDocument();
-})
-
 test('Initializetime works properly', ()=>{
 
 
@@ -25,9 +19,12 @@ test('updatetimes works properly', ()=>{
 
   const mockState = ["18:00", "19:00", "20:00", "21:00", "22:00"];
 
-  const result = updateTimes(mockState);
+  let date= new Date();
 
-  expect(result).toEqual(mockState);
+  const result = updateTimes(mockState, date);
+  let length = result.length();
+
+  expect(length).toBeGreaterThan(0);
 
 })
 

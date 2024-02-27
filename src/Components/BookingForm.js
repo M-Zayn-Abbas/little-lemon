@@ -1,11 +1,11 @@
 import React,{useState} from "react";
+import '../Cssfiles/BookingForm.css'
 const BookingForm = (props) => {
 
     const[date,setDate]= useState("");
     const[guests,setGuests]=useState("");
     const[times,setTimes]=useState("");
     const[occasion,setOccasion]=useState("");
-    const[formValid, setformValid] = useState(false);
 
     const validateform = () => {
         if(date !== "" && times !==""){
@@ -28,8 +28,8 @@ const BookingForm = (props) => {
 
     return (
         <div>
-        <h1>Booking Form</h1>
-        <form onSubmit={handleSubmit} style={{display: 'grid', maxWidth:'200px', gap: '20px'}}>
+        <h2>Booking Form</h2>
+        <form className="booking-form" onSubmit={handleSubmit} style={{display: 'grid', maxWidth:'200px', gap: '20px'}}>
             <div>
             <label htmlFor="date">Enter Date</label>
         <input type="date" name="date" id="date" value={date} 
@@ -59,6 +59,7 @@ const BookingForm = (props) => {
                 <label htmlFor="occasion">Select Occasion</label>
                 <select id="occasion" value={occasion}
                 onChange={(e)=> setOccasion(e.target.value)}>
+                    <option>None</option>
                     <option>Anniversery</option>
                     <option>Birthday</option>
                 </select>
